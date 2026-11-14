@@ -116,10 +116,10 @@ impl D3D9RenderEngine {
         self.vertex_buffer.clear();
         self.index_buffer.clear();
 
-        // Copy and pre-transform all vertices into a single contiguous buffer, converting
-        // colors to DX9 default format. `XYZRHW` bypasses vertex processing, avoiding
-        // repeated software transforms for each draw command. Apply DX9's half-pixel offset
-        // here.
+        // Copy and pre-transform all vertices into a single contiguous buffer,
+        // converting colors to DX9 default format. `XYZRHW` bypasses vertex
+        // processing, avoiding repeated software transforms for each draw
+        // command. Apply DX9's half-pixel offset here.
         let pos_offset = [draw_data.display_pos[0] + 0.5, draw_data.display_pos[1] + 0.5];
 
         draw_data
